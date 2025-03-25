@@ -3,7 +3,8 @@ package com.example.librarymanagementsystem
 class Newspaper(
     override val name: String,
     val issueNumber: Int,
-    override var accessibility: Boolean = true
+    val releaseMonth: ReleaseMonth,
+    override var isAccessable: Boolean = true,
 ) : LibraryItem(), ReadableInHall, Returnable {
 
     override val id = instanceCount
@@ -13,18 +14,33 @@ class Newspaper(
     }
 
     override fun readInHall(): String {
-        if (accessibility) {
-            accessibility = false
-            return "Газету $id взяли в читальный зал"
+        if (isAccessable) {
+            isAccessable = false
+            return getAndroidSystemResources().getString(R.string.newspaper_read_in_hall_success, id)
         }
-        return "В данный момент газета $id не доступна"
+        return getAndroidSystemResources().getString(R.string.newspaper_unavailable, id)
     }
 
     override fun returnItem(): String {
-        if (accessibility) {
-            return "Газета $id находится в библиотеке"
+        if (isAccessable) {
+            return getAndroidSystemResources().getString(R.string.newspaper_return_fail, id)
         }
-        accessibility = true
-        return "Газета $id возвращена"
+        isAccessable = true
+        return getAndroidSystemResources().getString(R.string.newspaper_return_success, id)
     }
+}
+
+enum class ReleaseMonth(val russianName: String) {
+    JANUARY("январь"),
+    FEBRUARY("февраль"),
+    MARCH("март"),
+    APRIL("апрель"),
+    MAY("май"),
+    JUNE("июнь"),
+    JULY("июль"),
+    AUGUST("август"),
+    SEPTEMBER("сентябрь"),
+    OCTOBER("октябрь"),
+    NOVEMBER("ноябрь"),
+    DECEMBER("декабрь");
 }

@@ -4,7 +4,7 @@ class Book(
     override val name: String,
     var author: String,
     var pageCount: Int,
-    override var accessibility: Boolean = true
+    override var isAccessable: Boolean = true,
 ) : LibraryItem(), Borrowable, ReadableInHall, Returnable {
 
     override val id = instanceCount
@@ -14,27 +14,27 @@ class Book(
     }
 
     override fun takeHome(): String {
-        if (accessibility) {
-            accessibility = false
-            return "Книгу $id взяли в домой"
+        if (isAccessable) {
+            isAccessable = false
+            return  getAndroidSystemResources().getString(R.string.book_take_home_success, id)
         }
-        return "В данный момент книгa $id не доступна"
+        return getAndroidSystemResources().getString(R.string.book_unavailable, id)
     }
 
     override fun readInHall(): String {
-        if (accessibility) {
-            accessibility = false
-            return "Книгу $id взяли в читальный зал"
+        if (isAccessable) {
+            isAccessable = false
+            return getAndroidSystemResources().getString(R.string.book_read_in_hall_success)
         }
-        return "В данный момент книгa $id не доступна"
+        return getAndroidSystemResources().getString(R.string.book_unavailable, id)
     }
 
     override fun returnItem(): String {
-        if (accessibility) {
-            return "Книга $id находится в библиотеке"
+        if (isAccessable) {
+            return getAndroidSystemResources().getString(R.string.book_return_fail, id)
         }
-        accessibility = true
-        return "Книга $id возвращена"
+        isAccessable = true
+        return getAndroidSystemResources().getString(R.string.book_return_success, id)
     }
 
 }

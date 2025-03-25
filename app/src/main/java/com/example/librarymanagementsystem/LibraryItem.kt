@@ -1,6 +1,6 @@
 package com.example.librarymanagementsystem
 
-abstract class LibraryItem : Identifiable, Accessible, Named {
+abstract class LibraryItem() : Identifiable, Accessible, Named {
     companion object {
         var instanceCount = 0
     }
@@ -11,7 +11,7 @@ interface Identifiable {
 }
 
 interface Accessible {
-    var accessibility: Boolean
+    var isAccessable: Boolean
 }
 
 interface Named {

@@ -1,7 +1,5 @@
 package com.example.librarymanagementsystem.library.items.newspaper
 
-import com.example.librarymanagementsystem.R
-import com.example.librarymanagementsystem.getAndroidSystemResources
 import com.example.librarymanagementsystem.library.items.LibraryItem
 import com.example.librarymanagementsystem.library.items.ReadableInHall
 import com.example.librarymanagementsystem.library.items.Returnable
@@ -23,16 +21,16 @@ class Newspaper(
     override fun readInHall(): String {
         if (isAccessable) {
             isAccessable = false
-            return getAndroidSystemResources().getString(R.string.newspaper_read_in_hall_success, id)
+            return "Газету $id взяли в читальный зал"
         }
-        return getAndroidSystemResources().getString(R.string.newspaper_unavailable, id)
+        return "В данный момент газета $id не доступна"
     }
 
     override fun returnItem(): String {
         if (isAccessable) {
-            return getAndroidSystemResources().getString(R.string.newspaper_return_fail, id)
+            return "Газета $id уже находится в библиотеке"
         }
         isAccessable = true
-        return getAndroidSystemResources().getString(R.string.newspaper_return_success, id)
+        return "Газета $id возвращена в библиотеку"
     }
 }

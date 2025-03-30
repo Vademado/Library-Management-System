@@ -1,7 +1,5 @@
 package com.example.librarymanagementsystem.library.items.disc
 
-import com.example.librarymanagementsystem.R
-import com.example.librarymanagementsystem.getAndroidSystemResources
 import com.example.librarymanagementsystem.library.items.Borrowable
 import com.example.librarymanagementsystem.library.items.DigitalMedia
 import com.example.librarymanagementsystem.library.items.Returnable
@@ -22,16 +20,16 @@ class Disc(
     override fun takeHome(): String {
         if (isAccessable) {
             isAccessable = false
-            return getAndroidSystemResources().getString(R.string.disc_take_home_success, id)
+            return "Диск $id взяли в домой"
         }
-        return getAndroidSystemResources().getString(R.string.disc_unavailable, id)
+        return "В данный момент диск $id не доступен"
     }
 
     override fun returnItem(): String {
         if (isAccessable) {
-            return getAndroidSystemResources().getString(R.string.disc_return_fail, id)
+            return "Диск $id уже находится в библиотеке"
         }
         isAccessable = true
-        return getAndroidSystemResources().getString(R.string.disc_return_success, id)
+        return "Диск $id возвращен в библиотеку"
     }
 }

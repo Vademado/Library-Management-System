@@ -1,7 +1,5 @@
 package com.example.librarymanagementsystem.library.items.book
 
-import com.example.librarymanagementsystem.R
-import com.example.librarymanagementsystem.getAndroidSystemResources
 import com.example.librarymanagementsystem.library.items.Borrowable
 import com.example.librarymanagementsystem.library.items.LibraryItem
 import com.example.librarymanagementsystem.library.items.ReadableInHall
@@ -23,25 +21,25 @@ class Book(
     override fun takeHome(): String {
         if (isAccessable) {
             isAccessable = false
-            return  getAndroidSystemResources().getString(R.string.book_take_home_success, id)
+            return "Книгу $id взяли в домой"
         }
-        return getAndroidSystemResources().getString(R.string.book_unavailable, id)
+        return "В данный момент книгa $id не доступна"
     }
 
     override fun readInHall(): String {
         if (isAccessable) {
             isAccessable = false
-            return getAndroidSystemResources().getString(R.string.book_read_in_hall_success)
+            return "Книгу $id взяли в читальный зал"
         }
-        return getAndroidSystemResources().getString(R.string.book_unavailable, id)
+        return "В данный момент книгa $id не доступна"
     }
 
     override fun returnItem(): String {
         if (isAccessable) {
-            return getAndroidSystemResources().getString(R.string.book_return_fail, id)
+            return "Книга $id уже находится в библиотеке"
         }
         isAccessable = true
-        return getAndroidSystemResources().getString(R.string.book_return_success, id)
+        return "Книга $id возвращена в библиотеку"
     }
 
 }

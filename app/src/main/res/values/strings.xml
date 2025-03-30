@@ -7,16 +7,16 @@
 
     <string name="book_unavailable">>В данный момент книгa %d не доступна</string>
     
-    <string name="book_return_success">>Книга %d находится в библиотеке</string>
-    <string name="book_return_fail">>Книга %d находится в библиотеке</string>
+    <string name="book_return_success">>Книга %d возвращена в библиотеку</string>
+    <string name="book_return_fail">>Книга %d уже находится в библиотеке</string>
 
     <!-- Сообщения для Newspaper -->
     <string name="newspaper_read_in_hall_success">>Газету %d взяли в читальный зал</string>
 
     <string name="newspaper_unavailable">>В данный момент газета %d не доступна</string>
 
-    <string name="newspaper_return_success">>Газета %d находится в библиотеке</string>
-    <string name="newspaper_return_fail">>Газета %d возвращена</string>
+    <string name="newspaper_return_success">>Газета %d возвращена в библиотеку</string>
+    <string name="newspaper_return_fail">>Газета %d уже находится в библиотеке</string>
 
     <!-- Сообщения для Disc -->
     <string name="disc_take_home_success">>Диск %d взяли домой</string>

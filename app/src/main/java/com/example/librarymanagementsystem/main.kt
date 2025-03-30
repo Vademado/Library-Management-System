@@ -1,6 +1,5 @@
 package com.example.librarymanagementsystem
 
-import android.content.res.Resources
 import com.example.librarymanagementsystem.library.Library
 import com.example.librarymanagementsystem.library.items.book.Book
 import com.example.librarymanagementsystem.library.items.disc.Disc
@@ -14,11 +13,6 @@ import com.example.librarymanagementsystem.store.DiscStore
 import com.example.librarymanagementsystem.store.NewspaperStore
 import com.example.librarymanagementsystem.utils.DiscType
 import com.example.librarymanagementsystem.utils.ReleaseMonth
-
-
-fun getAndroidSystemResources(): Resources {
-    return Resources.getSystem()
-}
 
 fun main() {
     val libraryPurchaseManager = LibraryPurchaseManager(

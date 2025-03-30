@@ -1,3 +1,88 @@
 <resources>
     <string name="app_name">LibraryManagementSystem</string>
+
+    <!-- Сообщения для Book -->
+    <string name="book_take_home_success">>Книгу %d взяли в домой</string>
+    <string name="book_read_in_hall_success">>Книгу %d взяли в читальный зал</string>
+
+    <string name="book_unavailable">>В данный момент книгa %d не доступна</string>
+    
+    <string name="book_return_success">>Книга %d возвращена в библиотеку</string>
+    <string name="book_return_fail">>Книга %d уже находится в библиотеке</string>
+
+    <!-- Сообщения для Newspaper -->
+    <string name="newspaper_read_in_hall_success">>Газету %d взяли в читальный зал</string>
+
+    <string name="newspaper_unavailable">>В данный момент газета %d не доступна</string>
+
+    <string name="newspaper_return_success">>Газета %d возвращена в библиотеку</string>
+    <string name="newspaper_return_fail">>Газета %d уже находится в библиотеке</string>
+
+    <!-- Сообщения для Disc -->
+    <string name="disc_take_home_success">>Диск %d взяли домой</string>
+
+    <string name="disc_unavailable">>В данный момент диск %d недоступен</string>
+
+    <string name="disc_return_success">>Диск %d возвращен в библиотеку</string>
+    <string name="disc_return_fail">>Диск %d уже находится в библиотеке</string>
+
+    <!-- Сообщения для InfoProvider -->
+    <string name="library_item_hort_info">>%1$s доступна: %2$s</string>
+
+    <!-- Сообщения для BookInfoProvider -->
+    <string name="book_detailed_info">>Книга: %1$s (%2$d стр.) автора: %3$s с id: %4$d доступна: %5$s</string>
+
+    <!-- Сообщения для NewspaperInfoProvider -->
+    <string name="newspaper_detailed_info">>Выпуск: %1$d месяц выпуска: %2$s газеты %3$s с id: %4$d доступен: %5$s</string>
+
+    <!-- Сообщения для DiscInfoProvider -->
+    <string name="disc_detailed_info">>%1$s %2$s доступен: %3$s</string>
+
+    <!-- Сообщения для LibraryManagementSystem -->
+    <!-- Main menu-->
+    <string name="greeting">Добро пожаловать в %s.</string>
+    <string name="separation">###########################################################</string>
+    <string-array name="main_menu_items">
+        <item>1.Показать книги</item>
+        <item>2.Показать газеты</item>
+        <item>3.Показать диски</item>
+        <item>4.Менеджер</item>
+        <item>5.Завершить обслуживание</item>
+    </string-array>
+
+    <!-- Items Menu-->
+    <string name="library_empty">>Библиотека пуста</string>
+    <string name="input_item_prompt_library">Введите номер позиции для подробной информации или нажмите Enter для выхода:</string>
+    <string name="invalid_item_number">>Неверный номер позиции, пробуйте снова в диапазоне от 1 до %d</string>
+    <string-array name="item_menu_items">
+        <item>1.Взять домой</item>
+        <item>2.Читать в читальном зале</item>
+        <item>3.Показать подробную информацию</item>
+        <item>4.Вернуть</item>
+        <item>5.Вернуться к списку</item>
+        <item>6.Вернуться в главное меню</item>
+    </string-array>
+    <string name="service_not_available">>Услуга не доступна</string>
+
+    <!-- Manager menu-->
+    <string-array name="manager_menu_items">
+        <item>1.Приобрести книгу</item>
+        <item>2.Приобрести газету</item>
+        <item>3.Приобрести диск</item>
+        <item>4.Вернуться в главное меню</item>
+    </string-array>
+
+    <!-- Store menu-->
+    <string name="store_empty">>Магазин пуст</string>
+    <string name="input_item_prompt_store">Введите номер позиции для покупки библиоткой экземпляра, %1$d для возвращения к списку магазинов или %2$d для выхода в главное меню:</string>
+    <string-array name="store_menu_items">
+        <item>%d.Вернуться к выбору магазина</item>
+        <item>%d.Вернуться в главное меню</item>
+    </string-array>
+    <string name="store_purchase_success">>Успешно приобретено: %s</string>
+
+    <string name="menu_invalid_command">>Неверный номер команды, пробуйте снова в диапозоне от 1 до %d</string>
+    <string name="menu_prompt">Чтобы продолжить, выберите одну из команд:</string>
+
+
 </resources>

@@ -1,10 +1,12 @@
-package com.example.librarymanagementsystem
+package com.example.librarymanagementsystem.library.items
 
 abstract class LibraryItem() : Identifiable, Accessible, Named {
     companion object {
         var instanceCount = 0
     }
 }
+
+abstract class DigitalMedia : LibraryItem() {}
 
 interface Identifiable {
     val id: Int

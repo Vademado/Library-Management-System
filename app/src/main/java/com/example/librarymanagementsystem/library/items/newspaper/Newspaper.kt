@@ -1,4 +1,11 @@
-package com.example.librarymanagementsystem
+package com.example.librarymanagementsystem.library.items.newspaper
+
+import com.example.librarymanagementsystem.R
+import com.example.librarymanagementsystem.getAndroidSystemResources
+import com.example.librarymanagementsystem.library.items.LibraryItem
+import com.example.librarymanagementsystem.library.items.ReadableInHall
+import com.example.librarymanagementsystem.library.items.Returnable
+import com.example.librarymanagementsystem.utils.ReleaseMonth
 
 class Newspaper(
     override val name: String,
@@ -28,19 +35,4 @@ class Newspaper(
         isAccessable = true
         return getAndroidSystemResources().getString(R.string.newspaper_return_success, id)
     }
-}
-
-enum class ReleaseMonth(val russianName: String) {
-    JANUARY("январь"),
-    FEBRUARY("февраль"),
-    MARCH("март"),
-    APRIL("апрель"),
-    MAY("май"),
-    JUNE("июнь"),
-    JULY("июль"),
-    AUGUST("август"),
-    SEPTEMBER("сентябрь"),
-    OCTOBER("октябрь"),
-    NOVEMBER("ноябрь"),
-    DECEMBER("декабрь");
 }

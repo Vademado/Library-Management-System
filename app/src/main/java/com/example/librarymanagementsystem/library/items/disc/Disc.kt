@@ -1,10 +1,17 @@
-package com.example.librarymanagementsystem
+package com.example.librarymanagementsystem.library.items.disc
+
+import com.example.librarymanagementsystem.R
+import com.example.librarymanagementsystem.getAndroidSystemResources
+import com.example.librarymanagementsystem.library.items.Borrowable
+import com.example.librarymanagementsystem.library.items.DigitalMedia
+import com.example.librarymanagementsystem.library.items.Returnable
+import com.example.librarymanagementsystem.utils.DiscType
 
 class Disc(
     override val name: String,
     val discType: DiscType,
     override var isAccessable: Boolean = true,
-) : LibraryItem(), Borrowable, Returnable, DigitalMedia {
+) : DigitalMedia(), Borrowable, Returnable {
 
     override val id = instanceCount
 
@@ -28,9 +35,3 @@ class Disc(
         return getAndroidSystemResources().getString(R.string.disc_return_success, id)
     }
 }
-
-enum class DiscType {
-    CD, DVD
-}
-
-interface DigitalMedia

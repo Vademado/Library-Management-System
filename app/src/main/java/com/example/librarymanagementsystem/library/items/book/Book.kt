@@ -1,4 +1,11 @@
-package com.example.librarymanagementsystem
+package com.example.librarymanagementsystem.library.items.book
+
+import com.example.librarymanagementsystem.R
+import com.example.librarymanagementsystem.getAndroidSystemResources
+import com.example.librarymanagementsystem.library.items.Borrowable
+import com.example.librarymanagementsystem.library.items.LibraryItem
+import com.example.librarymanagementsystem.library.items.ReadableInHall
+import com.example.librarymanagementsystem.library.items.Returnable
 
 class Book(
     override val name: String,

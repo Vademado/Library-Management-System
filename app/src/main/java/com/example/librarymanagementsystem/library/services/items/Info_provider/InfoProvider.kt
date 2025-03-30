@@ -1,4 +1,11 @@
-package com.example.librarymanagementsystem
+package com.example.librarymanagementsystem.library.services.items.Info_provider
+
+import com.example.librarymanagementsystem.R
+import com.example.librarymanagementsystem.getAndroidSystemResources
+import com.example.librarymanagementsystem.library.items.LibraryItem
+import com.example.librarymanagementsystem.library.items.book.Book
+import com.example.librarymanagementsystem.library.items.disc.Disc
+import com.example.librarymanagementsystem.library.items.newspaper.Newspaper
 
 abstract class InfoProvider() : ShortInfoProvider, DetailedInfoProvider {
     override fun getShortInfo(libraryItem: LibraryItem): String {
